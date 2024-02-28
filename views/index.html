@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conversor de Variables</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f0f0f0;
+            }
+            #container {
+                width: 80%;
+                margin: 50px auto;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                text-align: center;
+            }
+            form {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            label, input, select, button {
+                display: block;
+                margin-bottom: 10px;
+            }
+            button {
+                padding: 10px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            #result {
+                margin-top: 20px;
+                text-align: center;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Conversor de Variables</h1>
+            <form action="/convert" method="get">
+                <label for="type">Selecciona el tipo de conversión:</label>
+                <select id="type" name="type">
+                    <option value="temperature">Temperatura</option>
+                    <option value="weight">Peso</option>
+                    <option value="length">Longitud</option>
+                </select>
+                <label for="value">Valor:</label>
+                <input type="number" id="value" name="value">
+                <label for="inputUnit">Unidad de entrada:</label>
+                <input type="text" id="inputUnit" name="inputUnit">
+                <label for="outputUnit">Unidad de salida:</label>
+                <input type="text" id="outputUnit" name="outputUnit">
+                <button type="submit">Convertir</button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </body>
+    </html>   
