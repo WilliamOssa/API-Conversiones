@@ -5,7 +5,7 @@ const PORT = 3000;
 
 app.use(express.static('views'));
 
-app.get('/', (req, res) => {
+app.get('/', (res) => {
     fs.readFile('./views/index.html', 'utf8', (err, data) => 
     {
         if (err) {
