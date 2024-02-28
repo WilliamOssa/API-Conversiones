@@ -3,6 +3,7 @@ const express = require('express');
 const fs = require('fs');
 const app = express();
 const PORT = process.env.port;
+const {convertTemperature} = require('./functionHandler');
 
 app.use(express.static('views'));
 
@@ -84,7 +85,7 @@ app.get('/convert', (req, res) => {
     </html>
      `);
 });
-
+/*
 function convertTemperature(value, inputUnit, outputUnit) {
     let result;
     let celsius;
@@ -116,7 +117,7 @@ function convertTemperature(value, inputUnit, outputUnit) {
     }
     return result;
 }
-
+*/
 function convertWeight(value, inputUnit, outputUnit) {
     let result;
     let grams;
